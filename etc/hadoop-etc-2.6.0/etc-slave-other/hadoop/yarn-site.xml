@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<configuration>
+<property>
+   <name>yarn.resourcemanager.hostname</name>
+   <value>master</value>
+</property>
+
+<property>
+   <name>yarn.nodemanager.aux-services</name>
+   <value>mapreduce_shuffle</value>
+</property>
+
+<property>
+   <name>yarn.scheduler.minimum-allocation-mb</name>
+   <value>1024</value>
+</property>
+
+<property>
+   <name>yarn.scheduler.maximum-allocation-mb</name>
+   <value>26624</value>
+</property>
+
+<property>
+   <name>yarn.nodemanager.resource.memory-mb</name>
+   <value>26624</value>
+</property>
+
+<property>
+   <name>yarn.resourcemanager.fs.state-store.uri</name>
+   <value>/data/data1/hadoop/tmp/yarn/system/rmstore,/data/data2/hadoop/tmp/yarn/system/rmstore,/data/data3/hadoop/tmp/yarn/system/rmstore</value>
+</property>
+
+<property>
+   <name>yarn.nodemanager.local-dirs</name>
+   <value>/data/data1/hadoop/tmp/nm-local-dir,/data/data2/hadoop/tmp/nm-local-dir,/data/data3/hadoop/tmp/nm-local-dir</value>
+</property>
+
+<property>
+   <name>yarn.nodemanager.remote-app-log-dir</name>
+   <value>/data/data1/hadoop/tmp/logs,/data/data2/hadoop/tmp/logs,/data/data3/hadoop/tmp/logs</value>
+</property>
+
+<property>
+   <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+   <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+
+<property>
+   <name>yarn.log-aggregation.retain-seconds</name>
+   <value>600</value>
+</property>
+
+<property>
+   <name>yarn.log-aggregation.retain-check-interval-seconds</name>
+   <value>300</value>
+</property>
+
+<property>
+   <name>yarn.nodemanager.log.retain-seconds</name>
+   <value>600</value>
+</property>
+
+</configuration>
